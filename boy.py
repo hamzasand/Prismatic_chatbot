@@ -83,7 +83,7 @@ def send_email(subject, body, recipient_email):
     except Exception as e:
         print(f"❌ Email failed: {str(e)}")
 
-# 🔍 Extraction logic
+# Email Extraction logic
 def extract_email(text: str) -> Optional[str]:
     match = re.search(r"Email\s*:\s*([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})", text, re.IGNORECASE)
     return match.group(1).strip() if match else None
@@ -108,7 +108,7 @@ def auto_end_chat(session_id: str):
     if session_id in last_activity and time.time() - last_activity[session_id] > 120:
         end_chat(session_id)
 
-# 🚀 Main chatbot endpoint
+# Main chatbot endpoint
 @app.post("/chat/")
 def chat_with_bot(input: UserInput):
     session_id = input.session_id
@@ -125,7 +125,7 @@ def chat_with_bot(input: UserInput):
         services = extract_services(user_query)
 
         if not name or not email:
-            return {"response": "❗ Please send your details like:\nName: Your Name\nEmail: your@email.com\nService: Web Development"}
+            return {"response": "Please send your details like:\nName: Your Name\nEmail: your@email.com\nService: Web Development"}
 
         user_sessions[session_id] = {
             "name": name,
@@ -222,7 +222,7 @@ only provide information that is relevant and present in the given documents.alw
 
     return {"response": bot_reply}
 
-# 📤 End chat and send email
+# End chat and send email
 @app.get("/end_chat/{session_id}")
 def end_chat(session_id: str):
     if session_id not in conversations:
