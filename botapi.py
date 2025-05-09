@@ -184,7 +184,7 @@ Employees or team information List:
 13-Aqib Khan our Laravel Developer with skills: Laravel, Php,3rd party API’s, HTML, CSS 3 years 
 14-Ali Abdullah our React Native Developer with skills: Vs Code, Android Studio, Java script, Type Script, Firebase, Apis       3 years 
 15-Ayesha our SQA Engineer with skills: Manual testing, Automation testing, Database, API, Java core, Performance testing, Backend, UI/UX       3 years 
-16-Muhammad Hamza our AI/Ml Engineer with skills: Ml, AI , GenAI and AI automation specialist with 2 two years of experties.
+16-Muhammad Hamza Saeed our AI/Ml Engineer with skills: Ml, AI , GenAI and AI automation specialist with 2 two years of experties.
 17-Muhammad Ahmad our DevOps Engineer with skills: Linux & Window Server Admin, CI/CD(Jenkins, GitHub Actions), Docker, Kubernetes, AWS 3 years 
 18-Hamad Tariq our IT Infrastructure and DevOps Engineer with skills: Networking, System Administration, Cloud Support, IT Operations, OS Virtualization, ITIL >
 19-Abdul Wahab Qamar our Front End Developer with skills: HTML5, CSS3, JavaScript, Vue.js, React.js and Rest Api’s Integration  3 Years
@@ -196,9 +196,9 @@ only provide information that is relevant and present in the given documents.alw
                 {"role": "user", "content": f"Name: {name}, Email: {email}"},
                 {"role": "user", "content": f"Previous Chats:\n{formatted_history}\n\nContext: {context}\n\nUser: {user_query}"}
             ],
-            temperature=0.9,
+            temperature=0.7,
             top_p=0.9,
-            max_tokens=800
+            max_tokens=700
         )
         bot_reply = chat_completion.choices[0].message.content
     except Exception as e:
