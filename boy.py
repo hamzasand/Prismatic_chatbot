@@ -1,3 +1,4 @@
+# import required libraries
 import os
 import pickle
 import faiss
@@ -79,9 +80,9 @@ def send_email(subject, body, recipient_email):
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(EMAIL_USER, EMAIL_PASS)
             server.sendmail(EMAIL_USER, recipient_email, msg.as_string())
-        print(f"✅ Email sent to {recipient_email}")
+        print(f"Email sent to {recipient_email}")
     except Exception as e:
-        print(f"❌ Email failed: {str(e)}")
+        print(f"Email failed: {str(e)}")
 
 # Email Extraction logic
 def extract_email(text: str) -> Optional[str]:
