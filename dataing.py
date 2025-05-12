@@ -1,3 +1,4 @@
+# import the required libraries
 import os
 import faiss
 import numpy as np
@@ -5,6 +6,7 @@ import pickle
 from sentence_transformers import SentenceTransformer
 
 # Load embedding model
+# U can chose the model according the requirements
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 # Initialize FAISS index
@@ -31,7 +33,7 @@ def load_documents(path):
             texts.append(f.read())
             filenames.append(os.path.basename(path))
     else:
-        raise ValueError("❌ Invalid path! Provide a folder or a .txt file.")
+        raise ValueError(" Invalid path! Provide a folder or a .txt file.")
 
     return texts, filenames
 
