@@ -1,3 +1,4 @@
+# import required libraries
 import os
 import pickle
 import faiss
