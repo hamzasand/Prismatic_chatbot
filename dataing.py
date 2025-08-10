@@ -1,3 +1,4 @@
+# Change dataset according your requirements
 # import the required libraries
 import os
 import faiss
