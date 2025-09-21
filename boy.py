@@ -1,4 +1,4 @@
-# Import required libraries
+# Import Required libraries
 import os
 import pickle
 import faiss
