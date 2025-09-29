@@ -7,7 +7,7 @@ import pickle
 from sentence_transformers import SentenceTransformer
 
 # Load embedding model
-# U can chose the model according the requirements
+# Chose the model according the requirements
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 # Initialize FAISS index
