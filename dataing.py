@@ -1,4 +1,4 @@
-# Change dataset according your requirements
+# Change DataSet according your requirements
 # import the required libraries
 import os
 import faiss
