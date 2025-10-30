@@ -5,11 +5,12 @@ import time
 import faiss
 import pickle
 import smtplib
+import threading
 import numpy as np
 
 
 
-import threading
+
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
