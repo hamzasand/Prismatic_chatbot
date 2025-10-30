@@ -10,10 +10,9 @@ import numpy as np
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from email.mime.text import MIMEText
+from typing import Dict, List, Optional
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-
-from typing import Dict, List, Optional
 from sentence_transformers import SentenceTransformer
 from groq import Groq
 
