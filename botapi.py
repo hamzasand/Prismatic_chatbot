@@ -4,9 +4,9 @@ import re
 import time
 import faiss
 import pickle
-
-import numpy as np
 import smtplib
+import numpy as np
+
 
 
 import threading
