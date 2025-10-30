@@ -1,11 +1,13 @@
 # import required libraries
 import os
 import re
-import pickle
+import time
 import faiss
+import pickle
+
 import numpy as np
 import smtplib
-import time
+
 
 import threading
 from email.mime.text import MIMEText
