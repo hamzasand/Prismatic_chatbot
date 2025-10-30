@@ -7,10 +7,6 @@ import pickle
 import smtplib
 import threading
 import numpy as np
-
-
-
-
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
@@ -73,9 +69,9 @@ def send_email(subject, body, recipient_email):
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(EMAIL_USER, EMAIL_PASS)
             server.sendmail(EMAIL_USER, recipient_email, msg.as_string())
-        print(f"✅ Email sent successfully to {recipient_email}")
+        print(f"Email sent successfully to {recipient_email}")
     except Exception as e:
-        print(f"❌ Failed to send email: {str(e)}")
+        print(f"Failed to send email: {str(e)}")
 
 # Request Model for Chat
 class UserInput(BaseModel):
