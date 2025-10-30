@@ -16,7 +16,6 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sentence_transformers import SentenceTransformer
 
-
 # Load environment variables
 load_dotenv()
 EMAIL_USER = os.getenv("EMAIL_USER")
@@ -48,7 +47,7 @@ app = FastAPI()
 # Enable CORS for frontend requests
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Change this to specific origins for security
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
