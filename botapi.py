@@ -21,7 +21,6 @@ load_dotenv()
 EMAIL_USER = os.getenv("EMAIL_USER")
 EMAIL_PASS = os.getenv("EMAIL_PASS")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-
 # Groq Model Configuration
 GROQ_MODEL = "Llama3-70b-8192"
 groq_client = Groq(api_key=GROQ_API_KEY)
