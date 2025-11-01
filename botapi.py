@@ -27,7 +27,6 @@ groq_client = Groq(api_key=GROQ_API_KEY)
 
 # Load Sentence Transformer model
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
-
 # Load FAISS index and documents
 faiss_index_path = "faiss_index.bin"
 documents_path = "documents.pkl"
