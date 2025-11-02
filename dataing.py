@@ -38,11 +38,9 @@ def load_documents(path):
 
 # Path to your documents (change this to a folder or file path)
 document_path = "/home/administrator/chatbot/pris.txt"  # Or "./pris.txt" if it's a single file
-
 # Load and process documents
 docs, filenames = load_documents(document_path)
 doc_embeddings = model.encode(docs, convert_to_numpy=True)  # Generate embeddings
-
 # Convert embeddings to NumPy array and add to FAISS
 index.add(doc_embeddings)
 
