@@ -16,6 +16,7 @@ from typing import Dict, List, Optional
 from sentence_transformers import SentenceTransformer
 from groq import Groq
 
+
 # Load environment variables
 load_dotenv()
 EMAIL_USER = os.getenv("EMAIL_USER")
