@@ -2,8 +2,9 @@
 # import the required libraries
 import os
 import faiss
-import numpy as np
 import pickle
+import numpy as np
+
 from sentence_transformers import SentenceTransformer
 
 # Load embedding model
