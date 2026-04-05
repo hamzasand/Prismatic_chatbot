@@ -1,6 +1,5 @@
 # Change DataSet according your requirements
 import os
-
 import faiss
 
 import pickle
