@@ -6,6 +6,7 @@ import faiss
 import pickle
 
 import numpy as np
+
 from sentence_transformers import SentenceTransformer
 # Load embedding model
 # Chose the model according the requirements
