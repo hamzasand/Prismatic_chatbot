@@ -18,6 +18,7 @@ import numpy as np
 from groq import Groq
 
 from pydantic import BaseModel
+
 from dotenv import load_dotenv
 from email.mime.text import MIMEText
 from typing import Dict, List, Optional
